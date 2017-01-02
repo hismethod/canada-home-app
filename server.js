@@ -50,7 +50,7 @@ db.once('open', function () {
    console.log('Connected to mongodb server');
 });
 
-mongoose.connect('mongodb://admin:***REMOVED***@ds151108.mlab.com:51108/heroku_z98z29mf')
+mongoose.connect('mongodb://admin:***REMOVED***@ds151108.mlab.com:51108/heroku_z98z29mf');
 
 
 module.exports = app;

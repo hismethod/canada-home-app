@@ -1,0 +1,16 @@
+{
+  "name": "canada-home-app",
+  "description": "",
+  "authors": [
+    "Londy <his.methods@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hismethod/canada-home-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

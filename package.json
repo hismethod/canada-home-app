@@ -1,6 +1,7 @@
 {
   "name": "canada-home-app",
   "version": "0.0.0",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -14,5 +15,17 @@
     "mongoose": "^4.7.5",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8"
   }
 }

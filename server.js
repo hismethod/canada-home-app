@@ -1,10 +1,12 @@
 var express      = require('express');
+var exphbs       = require('express-handlebars');
 var path         = require('path');
 var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var mongoose     = require('mongoose');
+var handlebar    = require('handlebars');
 
 // route
 var index        = require('./routes/index');
@@ -13,9 +15,17 @@ var api          = require('./routes/api');
 // config files
 var db           = require('./config/db');
 
-var app          = express();
+var app = express();
+var hbs = exphbs.create({
+    defaultLayout: 'main',
+    layoutsDir     : 'views/layout/',
+    partialsDir    : 'views/partials/',
+    helpers        : undefined
+});
+
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -27,6 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api', api);
+
+mongoose.connect(db.url);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -43,6 +43,6 @@ gulp.task('watch', function () {
 
 //기본 task 설정
 
-gulp.task('compile', ['combine-js', 'compile-sass', 'compress-html']);
+gulp.task('compile', ['combine-js', 'compile-sass']);
 
 gulp.task('default', ['compile', 'watch']);

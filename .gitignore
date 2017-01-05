@@ -104,10 +104,4 @@ fabric.properties
 # *.ipr
 
 # End of https://www.gitignore.io/api/node,webstorm
-models/
-public/img/
-public/src/js/
 public/libs/
-views/
-/config/db.js
-/server.js

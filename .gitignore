@@ -108,6 +108,6 @@ models/
 public/img/
 public/src/js/
 public/libs/
-public/src/views/
+views/
 /config/db.js
 /server.js

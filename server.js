@@ -14,6 +14,7 @@ var api          = require('./routes/api');
 
 // config files
 var db           = require('./config/db');
+console.log(db.url);
 
 var app = express();
 var hbs = exphbs.create({
